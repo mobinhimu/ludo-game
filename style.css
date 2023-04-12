@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  user-select: none;
+  position: relative;
+}
+.container {
+  height: 80vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(70px);
+}
+.reset button,
+.control button {
+  border: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: margin 0.1s;
+}
+.reset-btn {
+  margin-top: 3px;
+}
+.player-wrap {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+.player-0,
+.player-1 {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  padding-top: 100px;
+  display: flex;
+  flex-flow: column;
+  transition: all 0.75s;
+  align-items: center;
+}
+.player-0 h1,
+.player-1 h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+
+.point0,
+.point1 {
+  font-size: 4rem !important;
+  font-weight: 700 !important;
+  color: #c7365f;
+}
+
+.current {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  font-size: 1.5rem;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: #c7365f;
+  border-radius: 10px;
+  color: white;
+  margin-top: 80px;
+}
+.control {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+.dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dice img {
+  width: 100px;
+}
+.btn {
+  margin-top: 0px;
+}
+/* js class */
+.btn-class {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 20px 0 #8d8b8ba1;
+}
+
+.hidden {
+  display: none;
+}
+.active-player {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player-winner {
+  background-color: #2f2f2f;
+}
+.winner-heading {
+  color: #c7365f;
+  font-weight: 600 !important;
+}
